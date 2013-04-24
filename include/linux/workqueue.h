@@ -320,7 +320,7 @@ enum {
  * system_nrt_freezable_wq is equivalent to system_nrt_wq except that
  * it's freezable.
  *
- * *_power_efficient_wq are inclined towards saving power and converted
+ *_power_efficient_wq are inclined towards saving power and converted
  * into WQ_UNBOUND variants if 'wq_power_efficient' is enabled; otherwise,
  * they are same as their non-power-efficient counterparts - e.g.
  * system_power_efficient_wq is identical to system_wq if

@@ -35,7 +35,7 @@
  */
 
 /* Tuning Interface */
-#define FREQ_RESPONSIVENESS		1190400
+#define FREQ_RESPONSIVENESS		998400
 #define CPUS_DOWN_RATE			2
 #define CPUS_UP_RATE			1
 #define DEC_CPU_LOAD			70

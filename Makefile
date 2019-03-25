@@ -1,7 +1,7 @@
 VERSION = 3
 PATCHLEVEL = 4
 SUBLEVEL = 0
-EXTRAVERSION = Karin-Kernel
+EXTRAVERSION = -Karin-Kernel
 NAME = Saber-toothed Squirrel
 
 # *DOCUMENTATION*

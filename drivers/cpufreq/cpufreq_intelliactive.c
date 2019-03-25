@@ -130,10 +130,10 @@ static bool io_is_busy = 1;
  * sync_freq
  */
 static unsigned int up_threshold_any_cpu_load = 95;
-static unsigned int sync_freq = 787200;
-static unsigned int up_threshold_any_cpu_freq = 998400;
+static unsigned int sync_freq = 1190400;
+static unsigned int up_threshold_any_cpu_freq = 1401600;
 
-static int two_phase_freq_array[NR_CPUS] = {[0 ... NR_CPUS-1] = 1190400} ;
+static int two_phase_freq_array[NR_CPUS] = {[0 ... NR_CPUS-1] = 1593600} ;
 
 static int cpufreq_governor_intelliactive(struct cpufreq_policy *policy,
 		unsigned int event);

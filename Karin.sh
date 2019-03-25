@@ -27,7 +27,7 @@ log="$kernel_dir/TEMP/logs"
 #Cleaning kernel
 clean(){
 cd $kernel_dir
-make clean -> $log/clean.log && make mrproper > $log/clean.log
+make clean -> $log/clean.log && make mrproper > $log/clean_mrproper.log
 end=$(date +%s)
 seconds=$(echo "$end - $start" | bc)
 awk -v t=$seconds 'BEGIN{t=int(t*1000); printf "##################################\n# Kernel Compiling Time: %d:%02d:%02d#\n##################################\n", t/3600000, t/60000%60, t/1000%60}'

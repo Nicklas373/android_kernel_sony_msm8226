@@ -34,15 +34,17 @@ echo $CPU_GOV > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
 echo $CPU_MIN > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
 echo $CPU_MAX > /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
 echo $CPU_GOV > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-echo "1" > /sys/devices/module/cpu_boost/paramaters/cpu_boost
-echo "40" > /sys/devices/module/cpu_boost/paramaters/input_boost_ms
-echo "998400" > /sys/devices/module/cpu_boost/paramaters/input_boost_freq
-echo "787200" > /sys/devices/module/cpu_boost/paramaters/sync_threshold
 echo "1" > /sys/devices/system/cpu/sched_mc_power_savings
 echo "$CPU_GOV Governor is running" | tee -a $LOG_FILE;
 echo "$CPU_MIN Hz Current Min CPU Speed" | tee -a $LOG_FILE;
 echo "$CPU_MAX Hz Current Max CPU Speed" | tee -a $LOG_FILE;
-echo "CPU Module already configured" | tee -a $LOG_FILE;
+
+# Adjust CPU Boost Module
+echo "1" > /sys/devices/module/cpu_boost/paramaters/cpu_boost
+echo "40" > /sys/devices/module/cpu_boost/paramaters/input_boost_ms
+echo "998400" > /sys/devices/module/cpu_boost/paramaters/input_boost_freq
+echo "787200" > /sys/devices/module/cpu_boost/paramaters/sync_threshold
+echo "CPU Boost is running" | tee -a $LOG_FILE;
 
 # Adjust Power Efficient Workqueue
 chmod 0644 /sys/module/workqueue/parameters/power_efficient
